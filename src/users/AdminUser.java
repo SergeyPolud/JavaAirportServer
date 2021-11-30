@@ -28,8 +28,65 @@ public class AdminUser extends User implements Serializable
                 case "CHANGE_ARR_STATUS" -> UpdateArrival(inputStream, outputStream, factory);
                 case "DELETE_ARRIVAL"    -> DeleteArrival(inputStream, outputStream, factory);
                 case "GET_ALL_FLIGHTS"   -> GetAllFlights(outputStream, factory);
-                case "ADD_FLIGHT "        -> AddFlight(inputStream, outputStream, factory);
+                case "ADD_FLIGHT "       -> AddFlight(inputStream, outputStream, factory);
+                case "CHANGE_FLIGHT"     -> UpdateFlight(inputStream, outputStream, factory);
+                case "CHANGE_BOOKING"    -> UpdateBooking(inputStream, outputStream, factory);
+                case "DELETE_FLIGHT"     -> DeleteBookingAndFlight(inputStream, factory);
             }
+        }
+    }
+
+    private void DeleteBookingAndFlight(ObjectInputStream inputStream, SessionFactory factory) throws IOException, ClassNotFoundException
+    {
+        var flight = (Flights) inputStream.readObject();
+        var booking = (Booking) inputStream.readObject();
+        var session = factory.openSession();
+        try
+        {
+            session.beginTransaction();
+            session.delete(flight);
+            session.delete(booking);
+            session.getTransaction().commit();
+            session.close();
+        } catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+    }
+
+    private void UpdateBooking(ObjectInputStream inputStream, ObjectOutputStream outputStream, SessionFactory factory) throws IOException, ClassNotFoundException
+    {
+        var booking = (Booking) inputStream.readObject();
+        var session = factory.openSession();
+        try
+        {
+            session.beginTransaction();
+            session.update(booking);
+            session.getTransaction().commit();
+            session.close();
+            outputStream.writeObject(1);
+        } catch(Exception e)
+        {
+            e.printStackTrace();
+            outputStream.writeObject(0);
+        }
+    }
+
+    private void UpdateFlight(ObjectInputStream inputStream, ObjectOutputStream outputStream, SessionFactory factory) throws IOException, ClassNotFoundException
+    {
+        var flight = (Flights) inputStream.readObject();
+        var session = factory.openSession();
+        try
+        {
+            session.beginTransaction();
+            session.update(flight);
+            session.getTransaction().commit();
+            session.close();
+            outputStream.writeObject(1);
+        } catch(Exception e)
+        {
+            e.printStackTrace();
+            outputStream.writeObject(0);
         }
     }
 
