@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="Entities.Boardingpasses" table="boardingpasses" schema="airport">
+        <id name="boardingPassId">
+            <column name="BoardingPassID" sql-type="int"/>
+            <generator class="increment"/>
+        </id>
+        <property name="seatNumber">
+            <column name="SeatNumber" sql-type="varchar(45)" length="45"/>
+        </property>
+        <property name="gateCode">
+            <column name="GateCode" sql-type="varchar(45)" length="45"/>
+        </property>
+        <property name="passengerId">
+            <column name="PassengerID" sql-type="int"/>
+        </property>
+    </class>
+</hibernate-mapping>

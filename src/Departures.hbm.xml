@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="Entities.Departures" table="departures" schema="airport">
+        <id name="departureId">
+            <column name="DepartureID" sql-type="int"/>
+            <generator class="increment"/>
+        </id>
+        <property name="gateCode">
+            <column name="GateCode" sql-type="varchar(45)" length="45"/>
+        </property>
+        <property name="actualDeparture">
+            <column name="ActualDeparture" sql-type="datetime"/>
+        </property>
+        <property name="status">
+            <column name="Status" sql-type="varchar(60)" length="60"/>
+        </property>
+        <property name="flightId">
+            <column name="FlightID" sql-type="varchar(45)" length="45"/>
+        </property>
+        <property name="runwayId">
+            <column name="RunwayID" sql-type="int"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,28 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/lib" />
+      <root url="jar://$PROJECT_DIR$/../demo1/src/main/resources/com/example/demo1/hib5/antlr-2.7.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../demo1/src/main/resources/com/example/demo1/hib5/byte-buddy-1.11.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../demo1/src/main/resources/com/example/demo1/hib5/classmate-1.5.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../demo1/src/main/resources/com/example/demo1/hib5/FastInfoset-1.2.15.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../demo1/src/main/resources/com/example/demo1/hib5/hibernate-commons-annotations-5.1.2.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../demo1/src/main/resources/com/example/demo1/hib5/hibernate-core-5.5.5.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../demo1/src/main/resources/com/example/demo1/hib5/istack-commons-runtime-3.0.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../demo1/src/main/resources/com/example/demo1/hib5/jandex-2.2.3.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../demo1/src/main/resources/com/example/demo1/hib5/javassist-3.27.0-GA.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../demo1/src/main/resources/com/example/demo1/hib5/javax.activation-api-1.2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../demo1/src/main/resources/com/example/demo1/hib5/javax.persistence-api-2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../demo1/src/main/resources/com/example/demo1/hib5/jaxb-api-2.3.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../demo1/src/main/resources/com/example/demo1/hib5/jaxb-runtime-2.3.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../demo1/src/main/resources/com/example/demo1/hib5/jboss-logging-3.4.2.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../demo1/src/main/resources/com/example/demo1/hib5/jboss-transaction-api_1.2_spec-1.1.1.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../demo1/src/main/resources/com/example/demo1/hib5/stax-ex-1.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../demo1/src/main/resources/com/example/demo1/hib5/txw2-2.3.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../Program Files (x86)/MySQL/Connector J 8.0/mysql-connector-java-8.0.26.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/lib" recursive="false" />
+  </library>
+</component>

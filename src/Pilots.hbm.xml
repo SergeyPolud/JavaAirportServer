@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="Entities.Pilots" table="pilots" schema="airport">
+        <id name="pilotId">
+            <column name="PilotID" sql-type="int"/>
+        </id>
+        <property name="name">
+            <column name="Name" sql-type="varchar(45)" length="45"/>
+        </property>
+        <property name="surname">
+            <column name="Surname" sql-type="varchar(45)" length="45"/>
+        </property>
+        <property name="hoursFlied">
+            <column name="HoursFlied" sql-type="varchar(45)" length="45"/>
+        </property>
+        <property name="pilotscol">
+            <column name="Pilotscol" sql-type="int"/>
+        </property>
+    </class>
+</hibernate-mapping>

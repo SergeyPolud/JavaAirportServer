@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="Entities.Booking" table="booking" schema="airport">
+        <id name="bookingId">
+            <column name="BookingID" sql-type="int"/>
+            <generator class="increment"/>
+        </id>
+        <property name="price">
+            <column name="Price" sql-type="decimal(5,2)" precision="5" scale="2"/>
+        </property>
+        <property name="seatNumber">
+            <column name="SeatNumber" sql-type="varchar(45)" length="45"/>
+        </property>
+        <property name="flightId">
+            <column name="FlightID" sql-type="varchar(45)" length="45"/>
+        </property>
+
+    </class>
+</hibernate-mapping>
